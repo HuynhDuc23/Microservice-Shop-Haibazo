@@ -7,21 +7,15 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
 @Entity
 @Table(name = "configs")
 public class Config extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private long id;
-
-    @Column(name = "config_key")
+    @Column(name = "key" , nullable = false)
     private String key;
-
     @Lob
-    @Column(name = "value")
+    @Column(name = "value", nullable = false)
     private String value;
 
 }

@@ -1,4 +1,9 @@
 package com.nayzak_shop.ecommerce_service.repository;
 
-public interface CountryRepository {
+import com.nayzak_shop.ecommerce_service.model.Country;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CountryRepository extends JpaRepository<Country,String> {
 }

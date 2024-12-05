@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 public class ItsRctLanguageResponseV1 {
     private String code ;
     private String name ;
-    private String symbol ;
     private LocalDateTime createdAt ;
     private LocalDateTime updatedAt ;
     private LocalDateTime deletedAt ;

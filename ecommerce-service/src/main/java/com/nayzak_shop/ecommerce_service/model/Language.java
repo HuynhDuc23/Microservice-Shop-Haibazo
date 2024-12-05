@@ -7,15 +7,13 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
 @Entity
 @Table(name = "languages")
 public class Language extends BaseEntity{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private long id;
+    @Column(name = "code")
+    private String code;
 
     @Column(name = "name", nullable = false)
     private String name;

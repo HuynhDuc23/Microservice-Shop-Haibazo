@@ -30,9 +30,8 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
     public ResponseEntity<ErrorResponse> handleGlobalException(Exception ex) {
-        //Xử lý các lỗi khác
         ErrorResponse errorResponse = new ErrorResponse(
-                "An unexpected error occurred chung",
+                "An unexpected error occurred ",
                 ex.getMessage()
         );
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorResponse);
